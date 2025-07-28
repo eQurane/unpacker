@@ -1,25 +1,30 @@
-File Organizer
-A simple utility for reviewing files in a root folder (including nested subfolders), logging their information, and moving files by extension to a .moved folder in the root. It also allows restoring ("demoving") files using the log information.
+# File Organizer
 
-Features
-Recursively scans the specified root folder
+A simple utility for reviewing files in a root folder (including nested subfolders), logging their information, and moving files by extension to a `.moved` folder near the root. It also allows restoring ("demoving") files using the log information.
 
-Logs all file paths and their original locations
+## Features
 
-Moves files to .moved folder, grouped by extension
+- Recursively scans the specified root folder  
+- Logs all file paths and their original locations  
+- Moves files to `.moved` folder, grouped by extension  
+- Can restore files to their original location using the generated log  
+- Optional read-only mode (for safe testing)
 
-Can restore files to their original location using the generated log
+## Usage
 
-Optional read-only mode (for safe testing)
+1. **Set folder permissions**  
+   Make sure the target folder is **not** set to *read-only* in Windows folder properties.
 
-Usage
-Set folder permissions:
-Make sure the target folder is not set to read-only in Windows folder properties.
+2. **Run the script**  
+   - Configure whether to just log or also move files
+   - Run the script and monitor output/logs
 
-Run the script:
-You can configure the script to either just log or also move files.
 
-Notes
-The .moved folder is automatically created in the root directory if it doesn’t exist.
+## Notes
 
-Moving and restoring actions are based entirely on the log file.
+- A `.moved` folder will be created near the root directory.
+- Moving and restoring files relies on accurate logging — do not edit the log manually.
+
+## License
+
+MIT License (or specify yours here)
